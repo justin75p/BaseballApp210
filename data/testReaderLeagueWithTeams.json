@@ -1,0 +1,74 @@
+{
+    "leagueName": "MLB",
+    "totalGames": 162,
+    "playersInLeague": [
+        {
+            "name": "Ohtani",
+                    "position": "DH",
+                    "balls": 0,
+                    "strikes": 0,
+                    "plateAppearances": 636,
+                    "strikeouts": 162,
+                    "walks": 81,
+                    "homeRuns": 54,
+                    "battingAverage": 0.314,
+                    "hits": 197,
+                    "onPlate": false
+        },
+        {
+            "name": "Judge",
+                    "position": "CF",
+                    "balls": 0,
+                    "strikes": 0,
+                    "plateAppearances": 171,
+                    "strikeouts": 171,
+                    "walks": 133,
+                    "homeRuns": 58,
+                    "battingAverage": 0.322,
+                    "hits": 180,
+                    "onPlate": false
+        }
+    ],
+    "teams": [
+        {
+            "name": "Dodgers",
+            "wins": 98,
+            "losses": 64,
+            "players": [
+                {
+                    "name": "Ohtani",
+                    "position": "DH",
+                    "balls": 0,
+                    "strikes": 0,
+                    "plateAppearances": 636,
+                    "strikeouts": 162,
+                    "walks": 81,
+                    "homeRuns": 54,
+                    "battingAverage": 0.314,
+                    "hits": 197,
+                    "onPlate": false
+                }
+            ]
+        },
+        {
+            "name": "Yankees",
+            "wins": 94,
+            "losses": 68,
+            "players": [
+                {
+                    "name": "Judge",
+                    "position": "CF",
+                    "balls": 0,
+                    "strikes": 0,
+                    "plateAppearances": 171,
+                    "strikeouts": 171,
+                    "walks": 133,
+                    "homeRuns": 58,
+                    "battingAverage": 0.322,
+                    "hits": 180,
+                    "onPlate": false
+                }
+            ]
+        }
+    ]
+}

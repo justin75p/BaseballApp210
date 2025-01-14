@@ -1,0 +1,31 @@
+{
+    "leagueName": "MLB",
+    "totalGames": 50,
+    "teams": [
+        {
+            "wins": 0,
+            "players": [],
+            "name": "DODGERS",
+            "losses": 0
+        },
+        {
+            "wins": 0,
+            "players": [],
+            "name": "YANKEES",
+            "losses": 0
+        },
+        {
+            "wins": 0,
+            "players": [],
+            "name": "METS",
+            "losses": 0
+        },
+        {
+            "wins": 0,
+            "players": [],
+            "name": "PHILLIES",
+            "losses": 0
+        }
+    ],
+    "playersInLeague": []
+}

@@ -1,0 +1,43 @@
+{
+    "leagueName": "MLB",
+    "totalGames": 162,
+    "teams": [
+        {
+            "wins": 93,
+            "players": [{
+                "plateAppearances": 0,
+                "walks": 0,
+                "hits": 0,
+                "homeRuns": 0,
+                "onPlate": false,
+                "balls": 0,
+                "strikes": 0,
+                "name": "Tatis",
+                "battingAverage": 0.276,
+                "strikeouts": 0,
+                "position": "RF"
+            }],
+            "name": "Padres",
+            "losses": 69
+        },
+        {
+            "wins": 89,
+            "players": [{
+                "plateAppearances": 0,
+                "walks": 0,
+                "hits": 0,
+                "homeRuns": 0,
+                "onPlate": false,
+                "balls": 0,
+                "strikes": 0,
+                "name": "Lindor",
+                "battingAverage": 0.273,
+                "strikeouts": 0,
+                "position": "SS"
+            }],
+            "name": "Mets",
+            "losses": 73
+        }
+    ],
+    "playersInLeague": []
+}
