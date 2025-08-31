@@ -242,8 +242,8 @@ public class BaseballAppGUI {
     }
 
     
-    // EFFECTS: prompts user to select a player from the list of players in the league
-    private Player selectPlayerByNumber(String inputDialog) {       
+    // EFFECTS: prompts user to select a player from ALL players in the league
+    private Player selectPlayerForTeam(String inputDialog) {       
         try {
             String message = "";
             int i = 1;
@@ -256,8 +256,48 @@ public class BaseballAppGUI {
                 textArea.append("Invalid choice. Try again.\n");
                 return null;
             }
+
             Player selectedPlayer = league.getPlayersInLeague().get(Integer.parseInt(choice) - 1);
             return selectedPlayer;
+
+        } catch (NumberFormatException n) {
+            textArea.append("Invalid input. Try again.\n");
+            return null;
+        }
+    }
+
+    // EFFECTS: prompts user to select a player ONLY in teams
+    private Player selectPlayerForAtBat(String inputDialog) {
+        try {
+            String message = "";
+            ArrayList<Player> playersOnTeams = new ArrayList<>();
+            
+            // Get all players that are actually on teams
+            for (Team team : league.getTeams()) {
+                playersOnTeams.addAll(team.getPlayers());
+            }
+            
+            if (playersOnTeams.isEmpty()) {
+                textArea.append("No players are assigned to teams!\n");
+                return null;
+            }
+            
+            int i = 1;
+            for (Player player : playersOnTeams) {
+                message += (i + ". " + player.getName() + "\n");
+                i++;
+            }
+            
+            String choice = JOptionPane.showInputDialog(inputDialog + "\n" + message);
+            int selectedIndex = Integer.parseInt(choice);
+            
+            if (selectedIndex < 1 || selectedIndex > playersOnTeams.size()) {
+                textArea.append("Invalid choice. Try again.\n");
+                return null;
+            }
+            
+            return playersOnTeams.get(selectedIndex - 1);
+            
         } catch (NumberFormatException n) {
             textArea.append("Invalid input. Try again.\n");
             return null;
@@ -405,7 +445,7 @@ public class BaseballAppGUI {
                     return;
                 }
 
-                Player selectedPlayer = selectPlayerByNumber("Select a player by number to add to team:");
+                Player selectedPlayer = selectPlayerForTeam("Select a player by number to add to team:");
                 if (selectedPlayer == null) {
                     return;
                 }
@@ -464,7 +504,7 @@ public class BaseballAppGUI {
                 textArea.append("You must first have a league with a team and players!\n");
                 return;
             }
-            Player selectedPlayer = selectPlayerByNumber("Select a player by number to simulate at-bat:\n");
+            Player selectedPlayer = selectPlayerForAtBat("Select a player by number to simulate at-bat:\n");
             Team playersTeam = checkPlayerOnATeam(selectedPlayer);
 
             if (playersTeam == null) {
